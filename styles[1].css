@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgreen;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    width: 260px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    font-size: 1.8em;
+    color: #fff;
+    background-color: #222;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    animation: slideIn 0.5s ease;
+}
+
+button:hover {
+    background-color: sandal;
+    transform: scale(1.05);
+    size: 10px;
+}
+
+button.equal {
+    grid-column: span 4;
+    background-color: #007bff;
+    color: white;
+}
+
+button.equal:hover {
+    background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
